@@ -1,11 +1,8 @@
 {
-  "name": "tauri-nextjs-template",
+  "name": "castra",
   "version": "0.1.0",
   "private": true,
-  "author": {
-    "name": "Your Name Here",
-    "email": "your-email-here@example.com"
-  },
+  "author": "Coordinate-Cat",
   "scripts": {
     "next-start": "cross-env BROWSER=none next dev",
     "next-build": "next build && next export",
@@ -63,5 +60,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Coordinate-Cat/castra.git",
+  "license": "MIT"
 }

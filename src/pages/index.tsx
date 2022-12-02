@@ -2,6 +2,7 @@ import { invoke } from "@tauri-apps/api/tauri"
 import type { NextPage } from "next"
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
 import { Card } from "@/components/Card"
@@ -44,6 +45,8 @@ const Home: NextPage = () => {
             Next.js!
           </a>
         </h1>
+
+        <Link href="/about"> About Us </Link>
 
         <p className="my-12 text-center text-2xl leading-9">
           Get started by editing{" "}

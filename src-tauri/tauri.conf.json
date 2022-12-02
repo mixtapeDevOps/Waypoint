@@ -59,7 +59,9 @@
         "resizable": true,
         "title": "Tauri NextJS App",
         "width": 1280,
-        "height": 800
+        "height": 800,
+        "titleBarStyle": "Overlay",
+        "decorations": false
       }
     ]
   }
