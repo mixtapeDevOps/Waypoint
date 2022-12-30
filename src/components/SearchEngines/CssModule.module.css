@@ -1,0 +1,40 @@
+.searchEngine {
+  /* size */
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+
+  /* border */
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  /* alignment */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+
+  /* color */
+  color: #000;
+  background: #fff;
+}
+
+.imageContainer {
+  /* size  */
+  width: 40px;
+  height: 40px;
+
+  /* blank */
+  margin: 4px;
+
+  /* alignment */
+  display: flex;
+  position: relative;
+}
+
+.img {
+  /* size */
+  width: 40px;
+
+  /* alignment */
+  position: absolute;
+}

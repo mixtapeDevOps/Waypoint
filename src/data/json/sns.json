@@ -1,0 +1,38 @@
+[
+  {
+    "title": "youtube",
+    "icon": "youtube.svg",
+    "url": "https://www.youtube.com/",
+    "description": "youtubeは動画を共有するサービスです。"
+  },
+  {
+    "title": "facebook",
+    "icon": "facebook.svg",
+    "url": "https://www.facebook.com/",
+    "description": "facebookは友達や家族、同僚とつながるためのサービスです。"
+  },
+  {
+    "title": "twitter",
+    "icon": "twitter.svg",
+    "url": "https://twitter.com/",
+    "description": "twitterは、簡単につながるサービスです。"
+  },
+  {
+    "title": "instagram",
+    "icon": "instagram.svg",
+    "url": "https://www.instagram.com/",
+    "description": "instagramは、写真を共有するサービスです。"
+  },
+  {
+    "title": "linkedin",
+    "icon": "linkedin.svg",
+    "url": "https://www.linkedin.com/",
+    "description": "linkedinは、ビジネスの人とつながるサービスです。"
+  },
+  {
+    "title": "github",
+    "icon": "github.svg",
+    "url": "https://github.com/",
+    "description": "githubは、プログラムを共有するサービスです。"
+  }
+]

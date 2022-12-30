@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Google",
+    "icon": "google.svg",
+    "url": "https://www.google.com/",
+    "description": "googleは検索エンジンです。"
+  },
+  {
+    "title": "Yahoo!",
+    "icon": "yahoo.svg",
+    "url": "https://www.yahoo.co.jp/",
+    "description": "yahoo!は検索エンジンです。"
+  },
+  {
+    "title": "Bing",
+    "icon": "bing.svg",
+    "url": "https://www.bing.com/",
+    "description": "bingは検索エンジンです。"
+  },
+  {
+    "title": "DuckDuckGo",
+    "icon": "duckduckgo.svg",
+    "url": "https://duckduckgo.com/",
+    "description": "duckduckgoは検索エンジンです。"
+  },
+  {
+    "title": "Tor",
+    "icon": "tor.svg",
+    "url": "https://www.torproject.org/",
+    "description": "Torは匿名ブラウザです。"
+  },
+  {
+    "title": "Yandex",
+    "icon": "yandex.svg",
+    "url": "https://yandex.com/",
+    "description": "yandexは検索エンジンです。"
+  },
+  {
+    "title": "StartPage",
+    "icon": "startpage.svg",
+    "url": "https://www.startpage.com/",
+    "description": "startpageは検索エンジンです。"
+  },
+  {
+    "title": "Qwant",
+    "icon": "qwant.svg",
+    "url": "https://www.qwant.com/",
+    "description": "qwantは検索エンジンです。"
+  },
+  {
+    "title": "Ecosia",
+    "icon": "ecosia.svg",
+    "url": "https://www.ecosia.org/",
+    "description": "ecosiaは検索エンジンです。"
+  },
+  {
+    "title": "Brave",
+    "icon": "brave.svg",
+    "url": "https://brave.com/",
+    "description": "braveは匿名ブラウザです。"
+  }
+]
