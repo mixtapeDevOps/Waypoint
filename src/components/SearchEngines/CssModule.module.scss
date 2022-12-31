@@ -4,9 +4,12 @@
   height: 50px;
   box-sizing: border-box;
 
+  /* blank */
+  padding: 4px;
+
   /* border */
   border: 1px solid #fff;
-  border-radius: 10px;
+  border-bottom: none;
 
   /* alignment */
   display: flex;
@@ -14,17 +17,27 @@
   justify-content: left;
 
   /* color */
+  color: #fff;
+}
+
+.searchEngine:hover {
+  background-color: #fff;
   color: #000;
-  background: #fff;
+}
+
+.searchEngine:last-child {
+  border-bottom: 1px solid #fff;
 }
 
 .imageContainer {
   /* size  */
-  width: 40px;
+  width: 30px;
   height: 40px;
 
-  /* blank */
-  margin: 4px;
+  /* border */
+  border-radius: 10px;
+
+  margin-right: 10px;
 
   /* alignment */
   display: flex;
@@ -33,7 +46,9 @@
 
 .img {
   /* size */
-  width: 40px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 
   /* alignment */
   position: absolute;

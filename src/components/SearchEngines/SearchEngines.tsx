@@ -1,4 +1,7 @@
-import styles from './CssModule.module.css';
+/* eslint-disable no-constant-condition */
+import Image from "next/image"
+
+import styles from "./CssModule.module.scss"
 
 interface SearchEnginesProps {
   title: string
@@ -7,18 +10,30 @@ interface SearchEnginesProps {
   description: string
 }
 
-export const SearchEngines: React.FC<SearchEnginesProps> = ({ url, title, icon, description }: SearchEnginesProps) => (
-  <a
-    href={url}
-    target="_blank"
-    className={styles.searchEngine}
-  >
-    {/* <div className={styles.dev}>aiueo</div> */}
-    <div className={styles.imageContainer}>
-      <img
-        src={'/svg/'+icon}
+export const SearchEngines: React.FC<SearchEnginesProps> = ({
+  url,
+  title,
+  icon,
+}: SearchEnginesProps) => (
+  <a href={url} target="_blank" className={styles.searchEngine} rel="noreferrer">
+    <div
+      style={{
+        backgroundColor:
+          title === "Yahoo!" ||
+          title === "Yandex" ||
+          title === "StartPage" ||
+          title === "Ecosia"
+            ? "#fff"
+            : "transparent",
+      }}
+      className={styles.imageContainer}
+    >
+      <Image
+        src={`/svg/${icon}`}
         alt={title}
-        className={"rounded-full"+styles.img}
+        width={40}
+        height={16}
+        className={styles.img}
       />
     </div>
     <h2 className={styles.title}>{title}</h2>

@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { NextPage } from "next"
 import Head from "next/head"
+
 // import Image from "next/image"
 import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
 
@@ -27,23 +29,18 @@ const Home: NextPage = () => {
           Social Media App
         </Link> */}
 
-        {/* <Image
-          src="google.png"
-          alt="aiueo"
-          width={64}
-          height={64}
-          className="rounded-full"
-        /> */}
-
-        {searchEngineData.map((link: { title: string; icon:string; url: string; description: string }) => (
-          <SearchEngines
-            key={link.title}
-            title={link.title}
-            icon={link.icon}
-            url={link.url}
-            description={link.description}
-          />
-        ))}
+        {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */}
+        {searchEngineData.map(
+          (link: { title: string; icon: string; url: string; description: string }) => (
+            <SearchEngines
+              key={link.title}
+              title={link.title}
+              icon={link.icon}
+              url={link.url}
+              description={link.description}
+            />
+          ),
+        )}
 
         {/* <div className="flex">
           <h1 className="m-0 flex items-end text-jb text-neutral-800">Castra Demo v0.1.0</h1>

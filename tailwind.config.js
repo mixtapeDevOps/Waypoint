@@ -3,8 +3,8 @@ module.exports = {
   theme: {
     extend: {},
     fontSize: {
-      'jb': ['9.875rem', {
-        lineHeight: '9.25rem',
+      'jb': ['7.875rem', {
+        lineHeight: '7.25rem',
         letterSpacing: '-0.02em',
         fontWeight: '700',
       }],
