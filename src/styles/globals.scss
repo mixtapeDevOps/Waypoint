@@ -19,3 +19,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+// scrollbar style
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: transparent;
+  }
+}
+
+.scrollbar:hover {
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #292f33;
+  }
+}
