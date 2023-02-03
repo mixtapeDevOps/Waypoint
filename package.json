@@ -10,6 +10,7 @@
     "build": "tauri build",
     "dev": "tauri dev",
     "lint": "next lint",
+    "fix": "next lint --fix",
     "prepare": "husky install"
   },
   "dependencies": {
