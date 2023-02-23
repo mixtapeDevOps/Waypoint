@@ -58,6 +58,8 @@ const Home: NextPage = () => {
         {/* ChatGPT svg */}
         <ChatGPT width={32} height={32} />
 
+        <p>Actions Test</p>
+
         {/* <div className="flex">
           <h1 className="m-0 flex items-end text-jb text-neutral-800">Castra Demo v0.1.0</h1>
         </div> */}
