@@ -27,14 +27,14 @@ jobs:
           path: screenshot.png
 
       - name: Install replace-in-file
-        run: npm install replace-in-file
+        run: npm install @actions/toolkit
 
       - name: Replace screenshot
-        uses: run-at-scale/replace-in-file-action@v1.3
+        uses: r-librarian/search-replace-action@v1.0.0
         with:
-          files: README.md
-          from: "<!-- screenshot -->"
-          to: "![screenshot](https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>/raw/main/screenshot.png)"
+          path: README.md
+          search: "<!-- screenshot -->"
+          replace: "![screenshot](https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>/raw/feature/alpha/screenshot.png)"
 
       - name: Commit screenshot
         uses: EndBug/add-and-commit@v7
@@ -47,4 +47,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github-token: ${{ secrets.CASTRA_TOKEN }}
+          github_token: ${{ secrets.CASTRA_TOKEN }}
