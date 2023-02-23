@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { NextPage } from "next"
 import Head from "next/head"
+import Link from "next/link"
 
 // import Image from "next/image"
 import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
@@ -22,12 +23,12 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="main mx-4 mt-4">
-        {/* <Link className="text-2xl font-bold leading-loose" href="/about">
+        <Link className="text-2xl font-bold leading-loose" href="/about">
           About App
         </Link>
-        <Link className="text-2xl font-bold leading-loose" href="/socialMedia">
+        <Link className="text-2xl font-bold leading-loose" href="/blog">
           Social Media App
-        </Link> */}
+        </Link>
 
         <div
           // hoverしたらスクロールバーを表示するscrollbarを追加

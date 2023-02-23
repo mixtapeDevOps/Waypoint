@@ -16,9 +16,12 @@
   "dependencies": {
     "@tauri-apps/api": "^1.2.0",
     "clsx": "^1.2.1",
+    "gray-matter": "^4.0.3",
     "next": "^13.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remark": "^13.0.0",
+    "remark-html": "^15.0.2"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^2.2.0",
