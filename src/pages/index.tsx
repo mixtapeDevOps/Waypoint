@@ -4,10 +4,13 @@ import Head from "next/head"
 import Link from "next/link"
 
 // import Image from "next/image"
-import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
+// import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
 
 // searchEngine.json import
 import searchEngine from "../data/json/searchEngine.json"
+
+// icons
+import { ChatGPT } from "../components/atoms/Icons/ChatGPT"
 
 // json整形
 const searchEngineJson = JSON.stringify(searchEngine)
@@ -23,19 +26,19 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="main mx-4 mt-4">
-        <Link className="text-2xl font-bold leading-loose" href="/about">
+        {/* <Link className="text-2xl font-bold leading-loose" href="/about">
           About App
         </Link>
         <Link className="text-2xl font-bold leading-loose" href="/blog">
           Social Media App
-        </Link>
+        </Link> */}
 
         <div
           // hoverしたらスクロールバーを表示するscrollbarを追加
           className="hidden-scrollbar scrollbar grid w-screen auto-cols-max grid-flow-col gap-0 overflow-scroll"
         >
           {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */}
-          {searchEngineData.map(
+          {/* {searchEngineData.map(
             (link: {
               title: string
               icon: string
@@ -50,8 +53,11 @@ const Home: NextPage = () => {
                 description={link.description}
               />
             ),
-          )}
+          )} */}
         </div>
+
+        {/* ChatGPT svg */}
+        <ChatGPT width={32} height={32} />
 
         {/* <div className="flex">
           <h1 className="m-0 flex items-end text-jb text-neutral-800">Castra Demo v0.1.0</h1>
