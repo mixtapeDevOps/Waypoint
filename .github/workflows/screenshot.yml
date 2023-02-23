@@ -21,8 +21,7 @@ jobs:
         run: npm install puppeteer
 
       - name: Start development server
-        run: yarn dev
-        background: yes
+        run: yarn dev &
 
       - name: Wait for server to start
         run: sleep 5
