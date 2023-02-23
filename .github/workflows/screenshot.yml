@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: "14"
 
+      - name: Install chromium
+        run: node node_modules/puppeteer/install.js
+
       - name: Take screenshot
         run: node scripts/take-screenshot.js
 
@@ -30,8 +33,6 @@ jobs:
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.CASTRA_TOKEN }}
-          owner: Coordinate-Cat
-          repo: castra
           filename: README.md
           search: "<!-- screenshot -->"
           replace: "![screenshot](https://github.com/Coordinate-Cat/castra/raw/feature/alpha/screenshot.png)"
