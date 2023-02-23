@@ -26,15 +26,12 @@ jobs:
           name: screenshot
           path: screenshot.png
 
-      - name: Install replace-in-file
-        run: npm install @actions/toolkit
+      - name: Install search-replace-action
+        uses: jacobtomlinson/search-replace-action@v1.2.0
 
       - name: Replace screenshot
-        uses: r-librarian/search-replace-action@v1.0.0
-        with:
-          path: README.md
-          search: "<!-- screenshot -->"
-          replace: "![screenshot](https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>/raw/feature/alpha/screenshot.png)"
+        run: |
+          sed -i.bak 's/<!-- screenshot -->/![screenshot](https:\/\/github.com\/<YOUR_USERNAME>\/<YOUR_REPOSITORY>\/raw\/feature\/alpha\/screenshot.png)/g' README.md
 
       - name: Commit screenshot
         uses: EndBug/add-and-commit@v7
