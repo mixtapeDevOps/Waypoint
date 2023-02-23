@@ -21,14 +21,8 @@ jobs:
         run: yarn install
 
       - name: Start dev server
-        run: yarn dev
-
-        # 「yarn dev」をバックグラウンドで実行
-        # 「&」を使うことで、プロセスをバックグラウンドで実行することができる
-        # 「> /dev/null 2>&1」を使うことで、出力を/dev/nullにリダイレクトし、標準エラー出力も含めてすべての出力を無視する
-        # これにより、このプロセスが終了するときにエラーが出力されることがなくなる
-        background: true
-        shell: bash -l {0}
+        run: |
+          yarn dev > /dev/null 2>&1 &
 
       - name: Take screenshot
         run: node scripts/take-screenshot.js
