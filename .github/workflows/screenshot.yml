@@ -2,7 +2,8 @@ name: Take screenshot and update README
 
 on:
   push:
-    branches: [main]
+    branches:
+      - feature/alpha
 
 jobs:
   screenshot:
