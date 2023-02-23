@@ -35,4 +35,4 @@ jobs:
           filename: README.md
           search: "<!-- screenshot -->"
           replace: "![screenshot](https://github.com/Coordinate-Cat/castra/raw/feature/alpha/screenshot.png)"
-          tag: ${{ github.ref }}
+          automatic_release_tag: ${{ github.ref }}
