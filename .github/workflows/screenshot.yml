@@ -1,20 +1,38 @@
 name: Take screenshot and update README
+
 on:
   push:
     branches:
       - feature/alpha
+
 jobs:
   screenshot:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: '16'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Start dev server
+        run: yarn dev
+
+        # 「yarn dev」をバックグラウンドで実行
+        # 「&」を使うことで、プロセスをバックグラウンドで実行することができる
+        # 「> /dev/null 2>&1」を使うことで、出力を/dev/nullにリダイレクトし、標準エラー出力も含めてすべての出力を無視する
+        # これにより、このプロセスが終了するときにエラーが出力されることがなくなる
+        background: true
+        shell: bash -l {0}
+
       - name: Take screenshot
-        run: node ss-process.js
+        run: node scripts/take-screenshot.js
+
       - name: Upload screenshot
         uses: actions/upload-artifact@v2
         with:
