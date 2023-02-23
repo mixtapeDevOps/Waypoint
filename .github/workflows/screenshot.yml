@@ -18,6 +18,7 @@ jobs:
           node-version: "14"
 
       - name: Install chromium
+        run: npm install puppeteer
         run: node node_modules/puppeteer/install.js
 
       - name: Take screenshot
