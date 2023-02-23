@@ -22,7 +22,18 @@ jobs:
 
       - name: Start dev server
         run: |
-          yarn dev > /dev/null 2>&1 &
+          yarn dev > /dev/null 2>&1 & 
+          export SERVER_PID=$!
+
+        # ジョブ終了時にWebサーバーを終了する
+        # バックグラウンドで実行されたプロセスを終了するために、killコマンドを使用
+        # バックグラウンドで実行されたプロセスをPID変数から取得するには、$を使用する
+        # ジョブ終了時に実行されるスクリプトは、次のように「post」キーワードを使って定義する
+        # https://docs.github.com/ja/actions/learn-github-actions/workflow-syntax-for-github-actions#jobsjob_idstepsrunpost
+        post:
+          - name: Stop dev server
+            run: |
+              kill $SERVER_PID
 
       - name: Take screenshot
         run: node scripts/take-screenshot.js
