@@ -17,6 +17,12 @@ jobs:
       with:
         node-version: '18.12.1'
 
+    - name: Install dependencies
+      run: yarn install
+
+    - name: tauri build
+      run: yarn build
+
     - name: Take screenshot
       run: node scripts/ss.js
 
