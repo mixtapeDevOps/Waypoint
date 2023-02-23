@@ -19,6 +19,22 @@ jobs:
       - name: Take screenshot
         run: node scripts/take-screenshot.js
 
+      - name: Upload screenshot
+        uses: actions/upload-artifact@v2
+        with:
+          name: screenshot
+          path: screenshot.png
+
+      - name: Install replace-in-file
+        run: npm install replace-in-file
+
+      - name: Replace screenshot
+        uses: run-at-scale/replace-in-file-action@v1.3
+        with:
+          files: README.md
+          from: "<!-- screenshot -->"
+          to: "![screenshot](https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>/raw/main/screenshot.png)"
+
       - name: Commit screenshot
         uses: EndBug/add-and-commit@v7
         with:
@@ -30,4 +46,4 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          CASTRA_TOKEN: ${{ secrets.CASTRA_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
