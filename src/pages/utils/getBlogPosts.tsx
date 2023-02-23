@@ -1,9 +1,9 @@
 import fs from "fs"
-import path from "path"
 import matter from "gray-matter"
-import { unified } from "unified"
-import remarkParse from "remark-parse"
+import path from "path"
 import remarkHtml from "remark-html"
+import remarkParse from "remark-parse"
+import { unified } from "unified"
 
 const blogDirectory = path.join(process.cwd(), "src/pages/blog")
 

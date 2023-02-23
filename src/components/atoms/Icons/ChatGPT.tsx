@@ -1,4 +1,5 @@
 import { FC } from "react"
+
 import { Props } from "./IconsProps/IconsProps"
 
 export const ChatGPT: FC<Props> = (props) => {

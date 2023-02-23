@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next"
-import { getBlogPosts } from "../pages/utils/getBlogPosts"
+
 import BlogList from "../components/BlogList"
+import { getBlogPosts } from "../pages/utils/getBlogPosts"
 
 interface Props {
   posts: ReturnType<typeof getBlogPosts>
@@ -14,7 +15,7 @@ export default function Home({ posts }: Props) {
   )
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = () => {
   const posts = getBlogPosts()
   return { props: { posts } }
 }

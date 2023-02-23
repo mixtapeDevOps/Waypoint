@@ -1,20 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { NextPage } from "next"
 import Head from "next/head"
-import Link from "next/link"
 
+// import Link from "next/link"
+// icons
+import { ChatGPT } from "../components/atoms/Icons/ChatGPT"
 // import Image from "next/image"
 // import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
 
 // searchEngine.json import
-import searchEngine from "../data/json/searchEngine.json"
-
-// icons
-import { ChatGPT } from "../components/atoms/Icons/ChatGPT"
+// import searchEngine from "../data/json/searchEngine.json"
 
 // json整形
-const searchEngineJson = JSON.stringify(searchEngine)
-const searchEngineData = JSON.parse(searchEngineJson)
+// const searchEngineJson = JSON.stringify(searchEngine)
+// const searchEngineData = JSON.parse(searchEngineJson)
 
 const Home: NextPage = () => {
   return (
