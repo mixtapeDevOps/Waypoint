@@ -1,0 +1,27 @@
+name: Take screenshot and update README
+
+on:
+  push:
+    branches:
+      - feature/alpha
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.12.1'
+
+    - name: Take screenshot
+      run: node scripts/ss.js
+
+    - name: Upload screenshot
+      uses: actions/upload-artifact@v2
+      with:
+        name: screenshot
+        path: screenshot.png
