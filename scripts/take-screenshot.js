@@ -1,4 +1,4 @@
-const puppeteer = require("puppeteer-core")
+const puppeteer = require("puppeteer")
 const fs = require("fs")
 const path = require("path")
 
@@ -15,7 +15,7 @@ async function takeScreenshot() {
 
 takeScreenshot().then(() => {
   const pathInReadme = "<!-- screenshot -->"
-  const screenshotUrl = `![screenshot](https://github.com/<YOUR_USERNAME>/<YOUR_REPOSITORY>/raw/main/screenshot.png)`
+  const screenshotUrl = `![screenshot](https://github.com/Coordinate-Cat/castra/raw/main/screenshot.png)`
   const readmePath = path.join(__dirname, "..", "README.md")
   const readmeContent = fs.readFileSync(readmePath, "utf8")
   const updatedReadmeContent = readmeContent.replace(pathInReadme, screenshotUrl)
