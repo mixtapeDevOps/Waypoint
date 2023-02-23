@@ -26,22 +26,13 @@ jobs:
           name: screenshot
           path: screenshot.png
 
-      - name: Install search-replace-action
-        uses: jacobtomlinson/search-replace-action@v1.2.0
-
       - name: Replace screenshot
-        run: |
-          sed -i.bak 's/<!-- screenshot -->/![screenshot](https:\/\/github.com\/<YOUR_USERNAME>\/<YOUR_REPOSITORY>\/raw\/feature\/alpha\/screenshot.png)/g' README.md
-
-      - name: Commit screenshot
-        uses: EndBug/add-and-commit@v7
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          author_name: GitHub Actions
-          author_email: actions@github.com
-          message: Add screenshot
-          add: README.md
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.CASTRA_TOKEN }}
+          repo_token: ${{ secrets.CASTRA_TOKEN }}
+          owner: Coordinate-Cat
+          repo: castra
+          filename: README.md
+          search: "<!-- screenshot -->"
+          replace: "![screenshot](https://github.com/Coordinate-Cat/castra/raw/feature/alpha/screenshot.png)"
+          tag: ${{ github.ref }}
