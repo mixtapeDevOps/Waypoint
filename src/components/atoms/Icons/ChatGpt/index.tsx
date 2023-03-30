@@ -1,6 +1,6 @@
 import { FC } from "react"
 
-import { Props } from "../IconsProps/IconsProps"
+import { Props } from "../IconsProps"
 
 export const ChatGPT: FC<Props> = (props) => {
   const { width, height, className } = props

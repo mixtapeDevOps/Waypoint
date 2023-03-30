@@ -1,5 +1,5 @@
 {
-  "name": "castra",
+  "name": "linkmarket",
   "version": "0.1.0",
   "private": true,
   "author": "Coordinate-Cat",
@@ -67,6 +67,6 @@
     ]
   },
   "main": "index.js",
-  "repository": "git@github.com:Coordinate-Cat/castra.git",
+  "repository": "git@github.com:Coordinate-Cat/linkMarket.git",
   "license": "MIT"
 }

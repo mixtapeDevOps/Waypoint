@@ -1,10 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { NextPage } from "next"
 import Head from "next/head"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 // import Link from "next/link"
 // icons
-import { ChatGPT } from "../components/atoms/Icons/ChatGPT"
+// import { ChatGPT } from "@/components/atoms/Icons/ChatGpt"
 // import Image from "next/image"
 // import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
 
@@ -16,6 +18,16 @@ import { ChatGPT } from "../components/atoms/Icons/ChatGPT"
 // const searchEngineData = JSON.parse(searchEngineJson)
 
 const Home: NextPage = () => {
+  const [isFlagEnabled, setIsFlagEnabled] = useState(false)
+  // get isFlagEnabled
+  useEffect(() => {
+    setIsFlagEnabled(
+      Boolean(
+        typeof localStorage !== "undefined" &&
+          localStorage.getItem("isFlagEnabled") === "true",
+      ),
+    )
+  }, [])
   return (
     <div className="flex min-h-screen max-w-full overflow-hidden bg-black text-white">
       <Head>
@@ -31,6 +43,14 @@ const Home: NextPage = () => {
         <Link className="text-2xl font-bold leading-loose" href="/blog">
           Social Media App
         </Link> */}
+
+        <Link className="text-2xl font-bold leading-loose" href="/lists">
+          Lists →
+        </Link>
+
+        <Link className="text-2xl font-bold leading-loose" href="/settings">
+          Settings →
+        </Link>
 
         <div
           // hoverしたらスクロールバーを表示するscrollbarを追加
@@ -56,9 +76,10 @@ const Home: NextPage = () => {
         </div>
 
         {/* ChatGPT svg */}
-        <ChatGPT width={32} height={32} />
+        {/* <ChatGPT width={32} height={32} /> */}
 
-        <p>Actions Test</p>
+        {isFlagEnabled && <p>isFlagEnabled is Enabled</p>}
+        {!isFlagEnabled && <p>isFlagEnabled is Disabled</p>}
 
         {/* <div className="flex">
           <h1 className="m-0 flex items-end text-jb text-neutral-800">Castra Demo v0.1.0</h1>
