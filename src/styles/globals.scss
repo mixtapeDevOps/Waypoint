@@ -6,8 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+  //   Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Inter", sans-serif;
   background: #000;
 }
 
@@ -18,4 +19,78 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+// scrollbar style
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: transparent;
+  }
+}
+
+.scrollbar:hover {
+  &::-webkit-scrollbar {
+    width: 1px;
+    height: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #292f33;
+  }
+}
+
+// custom checkbox
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox01 {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 30px;
+  position: relative;
+  width: auto;
+  user-select: none;
+}
+
+.checkbox01::before {
+  background: #fff;
+  border: 2px solid #21272b;
+  content: "";
+  display: block;
+  height: 17px;
+  width: 17px;
+  left: 5px;
+  margin-top: -8px;
+  position: absolute;
+  top: 50%;
+}
+
+.checkbox01::after {
+  border-right: 4px solid #21272b;
+  border-bottom: 4px solid #21272b;
+  content: "";
+  display: block;
+  height: 13px;
+  left: 9px;
+  margin-top: -8px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+  width: 9px;
+}
+
+input[type="checkbox"]:checked+.checkbox01::after {
+  opacity: 1;
 }

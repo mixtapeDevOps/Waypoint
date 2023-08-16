@@ -3,16 +3,24 @@ module.exports = {
   theme: {
     extend: {},
     fontSize: {
-      'jb': ['7.875rem', {
-        lineHeight: '7.25rem',
-        letterSpacing: '-0.02em',
-        fontWeight: '700',
-      }],
-      '2xl': '1.563rem',
-      '3xl': '1.953rem',
-      '4xl': '2.441rem',
-      '5xl': '3.052rem',
-    }
+      jb: [
+        "7.875rem",
+        {
+          lineHeight: "7.25rem",
+          letterSpacing: "-0.02em",
+          fontWeight: "700",
+        },
+      ],
+      "2xl": "1.563rem",
+      "3xl": "1.953rem",
+      "4xl": "2.441rem",
+      "5xl": "3.052rem",
+    },
+    colors: {
+      // white: "#CFC3A8",
+      // black: "#21272B",
+      white: "#3D3B38",
+      black: "#CFC3A8",
+    },
   },
-  plugins: [],
 }

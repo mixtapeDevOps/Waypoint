@@ -19,6 +19,11 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/atoms/Icons/IconsProps"
+  ],
   "exclude": ["node_modules", "src-tauri", "*.js"]
 }
