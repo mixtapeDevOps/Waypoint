@@ -1,21 +1,9 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import type { NextPage } from "next"
 import Head from "next/head"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-
-// import Link from "next/link"
-// icons
-// import { ChatGPT } from "@/components/atoms/Icons/ChatGpt"
-// import Image from "next/image"
-// import { SearchEngines } from "@/components/SearchEngines/SearchEngines"
-
-// searchEngine.json import
-// import searchEngine from "../data/json/searchEngine.json"
-
-// json整形
-// const searchEngineJson = JSON.stringify(searchEngine)
-// const searchEngineData = JSON.parse(searchEngineJson)
 
 const Home: NextPage = () => {
   const [isFlagEnabled, setIsFlagEnabled] = useState(false)
@@ -36,54 +24,20 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="main mx-4 mt-4">
-        {/* <Link className="text-2xl font-bold leading-loose" href="/about">
-          About App
-        </Link>
-        <Link className="text-2xl font-bold leading-loose" href="/blog">
-          Social Media App
-        </Link> */}
+      <main className="mx-4 mt-4">
+        <div className="flex flex-col font-bold">
+          <Link href="/lists">Lists →</Link>
 
-        <Link className="text-2xl font-bold leading-loose" href="/lists">
-          Lists →
-        </Link>
-
-        <Link className="text-2xl font-bold leading-loose" href="/settings">
-          Settings →
-        </Link>
+          <Link href="/settings">Settings →</Link>
+        </div>
 
         <div
           // hoverしたらスクロールバーを表示するscrollbarを追加
           className="hidden-scrollbar scrollbar grid w-screen auto-cols-max grid-flow-col gap-0 overflow-scroll"
-        >
-          {/* eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call */}
-          {/* {searchEngineData.map(
-            (link: {
-              title: string
-              icon: string
-              url: string
-              description: string
-            }) => (
-              <SearchEngines
-                key={link.title}
-                title={link.title}
-                icon={link.icon}
-                url={link.url}
-                description={link.description}
-              />
-            ),
-          )} */}
-        </div>
-
-        {/* ChatGPT svg */}
-        {/* <ChatGPT width={32} height={32} /> */}
+        ></div>
 
         {isFlagEnabled && <p>isFlagEnabled is Enabled</p>}
         {!isFlagEnabled && <p>isFlagEnabled is Disabled</p>}
-
-        {/* <div className="flex">
-          <h1 className="m-0 flex items-end text-jb text-neutral-800">Castra Demo v0.1.0</h1>
-        </div> */}
       </main>
     </div>
   )

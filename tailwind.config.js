@@ -17,8 +17,10 @@ module.exports = {
       "5xl": "3.052rem",
     },
     colors: {
-      white: "#CFC3A8",
-      black: "#21272B",
+      // white: "#CFC3A8",
+      // black: "#21272B",
+      white: "#3D3B38",
+      black: "#CFC3A8",
     },
   },
 }

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -9,22 +10,22 @@ const Lists = () => {
     setIsFlagEnabled(
       Boolean(
         typeof localStorage !== "undefined" &&
-          localStorage.getItem("isFlagEnabled") === "true",
+        localStorage.getItem("isFlagEnabled") === "true",
       ),
     )
   }, [])
 
   return (
-    <div className="flex min-h-screen max-w-full flex-col overflow-hidden bg-black p-2 text-white">
+    <div className="flex min-h-screen max-w-full flex-col overflow-hidden bg-black p-4 text-white font-bold">
       <Link href="/" className="mr-2">
-        ← Topに戻る
+        ← Top
       </Link>
       <div>
         {isFlagEnabled && (
           <ul>
-            <li>リスト1</li>
-            <li>リスト2</li>
-            <li>リスト3</li>
+            <li>List1</li>
+            <li>List2</li>
+            <li>List3</li>
           </ul>
         )}
       </div>
